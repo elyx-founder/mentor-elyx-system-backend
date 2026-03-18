@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: elyx-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: GEMINI_KEY
+        value: AIzaSyD-TR0a43u5lqNUfALDNJwpaeLEKGu8FBo
+      - key: SUPABASE_URL
+        value: https://mutherjkfncwcfeekhik.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im11dGhlcmprZm5jd2NmZWVraGlrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM4Mzc1OTcsImV4cCI6MjA4OTQxMzU5N30.EC0eNiMrf4nuK6VJLIF-oONGznRji-cQkqKGcVDSFDE
+      - key: JWT_SECRET
+        generateValue: true
+      - key: PORT
+        value: 8000
